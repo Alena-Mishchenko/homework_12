@@ -29,9 +29,6 @@ class Name(Field):
 
 
 class Phone(Field):
-    def __init__(self, value):
-        super().__init__(value)
-
     @Field.value.setter
     def value(self, value):
         self.__value = ''.join(filter(str.isdigit, value))
@@ -42,9 +39,6 @@ class Phone(Field):
 
 
 class Birthday(Field):
-    def __init__(self, value):
-        super().__init__(value)
-
     @Field.value.setter
     def value(self, value):
         try:
